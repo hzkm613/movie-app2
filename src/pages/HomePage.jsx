@@ -22,11 +22,14 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div>
+    <div className="w-screen h-auto p-10 bg-black">
+      <h1 className="text-center text-2xl font-bold text-white mb-10">
+        Welcome to MovieApp!
+      </h1>
       {loading ? (
         <LoadingScreen />
       ) : (
-        <div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {movies.map((movie) => (
             <MovieCard
               key={movie.id}
